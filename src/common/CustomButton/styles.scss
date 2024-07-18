@@ -1,0 +1,23 @@
+@import '../../styles/variables';
+
+._button {
+  all: unset;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 30px;
+  background-color: $blue;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+._active {
+  background-color: $white;
+  color: $darkBlue;
+}
+
+._active-svg {
+  background-color: $white;
+  color: $blue;
+}
