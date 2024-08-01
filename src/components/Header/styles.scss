@@ -5,6 +5,7 @@
   top: 40px;
   left: 0;
   width: 100%;
+  z-index: 10;
 
   &__content {
     display: flex;
@@ -58,7 +59,7 @@
     }
   }
   &__item {
-    width: 100%;
+    width: 100% !important;
   }
 
   @media (max-width: $mediumWidth) {
@@ -109,9 +110,8 @@
     height: 30px;
   }
   &__burger {
-    display: none;
-    @media (max-width: $mediumWidth) {
-      display: block;
+    @media (min-width: $mediumWidth + 1px) {
+      display: none !important;
     }
   }
 }

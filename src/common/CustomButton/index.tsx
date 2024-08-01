@@ -1,5 +1,5 @@
 import { Typography } from '../Typography/intex';
-import { CustomButtonProps } from './types';
+import { CustomButtonProps, CustomButtonType } from './types';
 import classNames from 'classnames';
 import './styles.scss';
 
@@ -11,19 +11,35 @@ export const CustomButton: React.FC<CustomButtonProps> = ({
   children,
   className,
   style,
+  customHref = '',
+  buttonType = CustomButtonType.BUTTON,
   ...props
 }) => {
-  return (
+  return buttonType === CustomButtonType.BUTTON ? (
     <button
       style={{ padding: `${paddingVertical}px ${paddingHorizontal}px`, ...style }}
       className={classNames(
+        className,
         '_button',
         { _active: !isActive && typeof children === 'string' },
         { '_active-svg': !isActive && typeof children !== 'string' },
-        className,
       )}
       {...props}>
       <Typography fontSize={textSize}>{children}</Typography>
     </button>
+  ) : (
+    <a href={`#${customHref}`}>
+      <button
+        style={{ padding: `${paddingVertical}px ${paddingHorizontal}px`, ...style }}
+        className={classNames(
+          className,
+          '_button',
+          { _active: !isActive && typeof children === 'string' },
+          { '_active-svg': !isActive && typeof children !== 'string' },
+        )}
+        {...props}>
+        <Typography fontSize={textSize}>{children}</Typography>
+      </button>
+    </a>
   );
 };

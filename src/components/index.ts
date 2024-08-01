@@ -1,1 +1,11 @@
-export { Header } from './Header/index';
+export { Header } from './Header';
+export { Hello } from './Hello';
+export { Quote } from './Quote';
+export { Welcome } from './Welcome';
+export { Location } from './Location';
+export { Doctor } from './Doctor';
+export { Services } from './Services';
+export { Pricing } from './Pricing';
+export { Appointment } from './Appointment';
+export { Contact } from './Contact';
+export { Footer } from './Footer';

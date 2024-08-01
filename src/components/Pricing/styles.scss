@@ -1,0 +1,134 @@
+@import '../../styles/variables';
+
+.pricing {
+  background: $blue_10;
+  padding: 100px 0px 200px;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 65px;
+  }
+  &__info {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+  &__sub-title {
+    color: $blue;
+  }
+  &__title {
+    text-align: center;
+    color: $darkBlue;
+  }
+  &__text {
+    text-align: center;
+    color: $darkBlue;
+  }
+}
+
+.budget {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  &__container {
+    flex: 1 1 calc(33.333% - (30px * 2));
+
+    @media (max-width: $mediumWidth) {
+      flex: 1 1 100%;
+    }
+  }
+  &__item {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 45px 50px;
+    border-radius: 20px;
+    background: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:hover {
+      transition: all 0.3s ease;
+      background-color: $blue;
+      .budget__image {
+        svg {
+          color: $white;
+        }
+      }
+      .budget__title {
+        color: $white;
+      }
+      .budget__price {
+        color: $white;
+      }
+      .budget__list {
+        div {
+          color: $white;
+        }
+      }
+      .budget__button {
+        background-color: $white;
+        color: $darkBlue;
+      }
+    }
+  }
+  &__image {
+    margin-bottom: 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    div {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      transform: translate3d(20px, -5px, -1px);
+    }
+
+    svg {
+      color: $darkBlue;
+      transform: translateZ(0);
+    }
+  }
+  &__title {
+    color: $darkBlue;
+    margin-bottom: 30px;
+  }
+  &__price {
+    margin-bottom: 30px;
+    color: $darkBlue;
+    span {
+      height: 0;
+      line-height: 1;
+      vertical-align: baseline;
+      _vertical-align: bottom;
+      position: relative;
+      bottom: 1ex;
+      font-size: 16px;
+
+      &:first-child {
+        font-size: 18px;
+      }
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    div {
+      color: $darkBlue;
+      text-align: center;
+      padding: 10px;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $blue_13;
+      }
+    }
+  }
+  &__button {
+  }
+}

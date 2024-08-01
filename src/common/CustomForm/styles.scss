@@ -1,0 +1,104 @@
+@import '../../styles/variables';
+
+.form {
+  min-width: 500px;
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  border-radius: 20px;
+  padding: 30px 25px 45px;
+
+  @media (max-width: $mobileWidth) {
+    min-width: 0px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  &__title {
+    color: $blue;
+    margin-bottom: 30px;
+
+    @media (max-width: $mobileWidth) {
+      p {
+        font-size: 14px !important;
+      }
+    }
+  }
+  &__sub-title {
+    color: $darkBlue;
+    margin-bottom: 20px;
+
+    @media (max-width: $mobileWidth) {
+      p {
+        font-size: 24px !important;
+      }
+    }
+    span {
+      color: $blue;
+    }
+  }
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+
+    input,
+    textarea {
+      background: rgba(100, 164, 236, 0.1);
+      border: 1px solid rgba(100, 164, 236, 0.5);
+      border-radius: 20px;
+      padding: 15px 30px;
+      color: $darkBlue;
+      resize: none;
+    }
+  }
+  &__checkbox {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    position: relative;
+    height: 30px;
+    padding-left: 35px;
+
+    input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+
+      &:checked + label {
+        background: rgba(100, 164, 236, 0.5);
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+    label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.5);
+      border: 1px solid rgba(100, 164, 236, 0.5);
+      border-radius: 10px;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:after {
+        content: '';
+        display: block;
+        width: 15px;
+        height: 15px;
+        border-radius: 3px;
+        background: white;
+        opacity: 0;
+      }
+    }
+  }
+  &__button {
+    align-self: center;
+  }
+}

@@ -1,0 +1,28 @@
+@import '../../styles/variables';
+
+.appointment {
+  background: url('../../assets/background/book.png') no-repeat;
+  background-size: cover;
+  padding: 200px 0px;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+
+    svg {
+      width: 102px;
+      height: 105px;
+      color: $white;
+    }
+  }
+  &__text {
+    text-align: center;
+    max-width: 500px;
+    color: $white;
+
+    @media (max-width: $mobileWidth) {
+      font-size: 30px !important;
+    }
+  }
+}

@@ -1,0 +1,97 @@
+@import '../../styles/variables';
+
+.doctor {
+  padding: 150px 0px;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin-bottom: 50px;
+  }
+  &__image {
+    margin-bottom: 50px;
+    img {
+      max-width: 100%;
+    }
+  }
+  &__title {
+    text-align: center;
+    color: $darkBlue;
+    margin-bottom: 25px;
+  }
+  &__text {
+    text-align: center;
+    color: $darkBlue;
+  }
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 25px;
+  &__container {
+    flex: 1 1 calc(25% - (25px * 3));
+    @media (max-width: $mediumWidth) {
+      flex: 1 1 calc(50% - (25px));
+    }
+
+    @media (max-width: $mobileWidth) {
+      flex: 1 1 100%;
+    }
+  }
+  &__item {
+    box-sizing: border-box;
+    height: 100%;
+    border: 1px solid $blue_50;
+    box-shadow: 1px 4px 26px 10px rgba(100, 164, 236, 0.1);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 35px 30px 50px;
+    cursor: pointer;
+
+    &:hover {
+      background: linear-gradient(180deg, #2b6cf5 0%, #193f8f 100%);
+      .details {
+        &__title {
+          color: $white;
+        }
+        &__text {
+          color: $white;
+        }
+        &__image {
+          svg {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+  &__title {
+    text-align: center;
+    color: $darkBlue;
+  }
+  &__text {
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    color: $darkBlue;
+  }
+
+  &__image {
+    svg {
+      color: $darkBlue;
+    }
+  }
+}

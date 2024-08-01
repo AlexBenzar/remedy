@@ -1,10 +1,9 @@
-import { CustomButton } from '../../common/CustomButton';
 import './styles.scss';
-
 import LogoIcon from '../../assets/icons/logo.svg';
-import BurgerIcon from '../../assets/icons/burger.svg';
 import { menuItems, subMenuItems } from './constants';
 import { useState } from 'react';
+import { CustomButton } from '../../common';
+import { CustomButtonType } from '../../common/CustomButton/types';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,7 +18,9 @@ export const Header = () => {
                 <CustomButton
                   className="menu__item"
                   paddingHorizontal={0}
-                  isActive={item.title === 'Home'}>
+                  isActive={item.title === 'Home'}
+                  buttonType={CustomButtonType.A}
+                  customHref={item.link}>
                   {item.title}
                 </CustomButton>
               </li>
@@ -30,14 +31,25 @@ export const Header = () => {
           <ul className="sub-menu__list">
             {subMenuItems.map((item) => (
               <li>
-                <CustomButton
-                  className={`sub-menu__item ${item.alt === 'burger' && 'sub-menu__burger'}`}
-                  paddingHorizontal={10}
-                  paddingVertical={10}
-                  isActive={item.alt === 'burger' && isMenuOpen}
-                  onClick={() => item.alt === 'burger' && setIsMenuOpen(!isMenuOpen)}>
-                  {item.img}
-                </CustomButton>
+                {item.alt === 'burger' ? (
+                  <CustomButton
+                    className={`sub-menu__item sub-menu__burger`}
+                    paddingHorizontal={10}
+                    paddingVertical={10}
+                    isActive={isMenuOpen}
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                    {item.img}
+                  </CustomButton>
+                ) : (
+                  <CustomButton
+                    className={`sub-menu__item`}
+                    paddingHorizontal={10}
+                    paddingVertical={10}
+                    buttonType={CustomButtonType.A}
+                    customHref={item.link}>
+                    {item.img}
+                  </CustomButton>
+                )}
               </li>
             ))}
           </ul>
