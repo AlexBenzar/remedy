@@ -4,7 +4,7 @@ import './styles.scss';
 import { CustomFormProps } from './types';
 
 export const CustomForm = ({ onSubmit, formType = 'contact', ...props }: CustomFormProps) => {
-  const submitAction = (e) => {
+  const submitAction = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     onSubmit();
   };

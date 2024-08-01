@@ -10,7 +10,9 @@ export const Header = () => {
   return (
     <header className="header">
       <div className="header__content _container">
-        <LogoIcon className="header__logo" />
+        <div className="header__logo">
+          <LogoIcon />
+        </div>
         <nav className={`header__menu menu ${isMenuOpen && '_active'}`}>
           <ul className="menu__list">
             {menuItems.map((item) => (

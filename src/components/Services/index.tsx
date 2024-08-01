@@ -5,9 +5,9 @@ import { specializations } from './constants';
 import './styles.scss';
 
 export const Services = () => {
-  const [flippedIndex, setFlippedIndex] = useState(null);
+  const [flippedIndex, setFlippedIndex] = useState<null | number>(null);
 
-  const handleClick = (index) => {
+  const handleClick = (index: number) => {
     setFlippedIndex(flippedIndex === index ? null : index);
   };
 

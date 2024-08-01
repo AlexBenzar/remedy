@@ -35,7 +35,7 @@ export const Contact = () => {
                 <PhoneIcon /> +921212323332
               </Typography>
               <Typography fontSize={28} fontWeight={500}>
-                <MessageIcon width={40} height={34} /> remedy.contact@gmail.com
+                <MessageIcon /> remedy.contact@gmail.com
               </Typography>
             </div>
             <CustomButton
