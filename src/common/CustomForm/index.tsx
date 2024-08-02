@@ -38,7 +38,12 @@ export const CustomForm = ({ onSubmit, formType = 'contact', ...props }: CustomF
         {formType === 'contact' ? (
           <textarea id="story" name="story" rows={4} />
         ) : (
-          <input type="date" placeholder="Date" required />
+          <input
+            type="date"
+            placeholder="Date"
+            required
+            max={new Date().toISOString().split('T')[0]}
+          />
         )}
       </div>
       <div className="form__checkbox">

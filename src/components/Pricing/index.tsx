@@ -57,7 +57,10 @@ export const Pricing = () => {
         </div>
       </div>
       {isFormOpen && (
-        <Wrapper>
+        <Wrapper
+          onClose={() => {
+            setIsFormOpen(false);
+          }}>
           <CustomForm
             onSubmit={() => {
               setIsFormOpen(false);

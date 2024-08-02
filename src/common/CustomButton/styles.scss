@@ -25,4 +25,9 @@
 a {
   text-decoration: none;
   color: inherit;
+
+  & ._button {
+    box-sizing: border-box;
+    width: 100%;
+  }
 }
