@@ -1,10 +1,10 @@
+import CheckmarkIcon from '../../assets/icons/checkmark.svg';
 import SmilingDoctorImage from '../../assets/img/smiling-doctor.png';
 import { CustomButton, Typography } from '../../common';
+import { CustomButtonType } from '../../common/CustomButton/types';
+import { Routes } from '../../routes';
 import { services } from './constants';
 import './styles.scss';
-import CheckmarkIcon from '../../assets/icons/checkmark.svg';
-import { Routes } from '../../routes';
-import { CustomButtonType } from '../../common/CustomButton/types';
 
 export const Welcome = () => {
   return (

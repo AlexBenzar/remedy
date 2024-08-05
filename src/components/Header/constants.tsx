@@ -1,6 +1,6 @@
+import BurgerIcon from '../../assets/icons/burger.svg';
 import LocationIcon from '../../assets/icons/location.svg';
 import MessageIcon from '../../assets/icons/message.svg';
-import BurgerIcon from '../../assets/icons/burger.svg';
 import { Routes } from '../../routes';
 
 export const menuItems = [

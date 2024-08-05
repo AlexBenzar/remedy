@@ -1,12 +1,12 @@
-import HeartPulseIcon from '../../assets/icons/heart-pulse-simple.svg';
 import FacebookIcon from '../../assets/icons/facebook.svg';
+import HeartPulseIcon from '../../assets/icons/heart-pulse-simple.svg';
 import InstagramIcon from '../../assets/icons/instagram.svg';
 import PinterestIcon from '../../assets/icons/pinterest.svg';
 import { CustomButton, Typography } from '../../common';
-import './styles.scss';
 import { CustomButtonType } from '../../common/CustomButton/types';
 import { Routes } from '../../routes';
 import { menuItems } from '../Header/constants';
+import './styles.scss';
 
 export const Footer = () => {
   return (

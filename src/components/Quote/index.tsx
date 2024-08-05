@@ -1,8 +1,8 @@
-import surgeonsImage from '../../assets/img/surgeons.png';
 import QuoteIcon from '../../assets/icons/quote.svg';
+import surgeonsImage from '../../assets/img/surgeons.png';
 import { Typography } from '../../common';
-import './styles.scss';
 import { Routes } from '../../routes';
+import './styles.scss';
 
 export const Quote = () => {
   return (

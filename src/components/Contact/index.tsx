@@ -1,9 +1,9 @@
-import { CustomButton, CustomForm, Modal, Typography } from '../../common';
-import './styles.scss';
+import { useState } from 'react';
 import MessageIcon from '../../assets/icons/message.svg';
 import PhoneIcon from '../../assets/icons/phone-number.svg';
+import { CustomButton, CustomForm, Modal, Typography } from '../../common';
 import { Routes } from '../../routes';
-import { useState } from 'react';
+import './styles.scss';
 
 export const Contact = () => {
   const [isSubmit, setIsSubmit] = useState(false);

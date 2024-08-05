@@ -1,7 +1,7 @@
-import './styles.scss';
+import { useState } from 'react';
 import HeartPulseIcon from '../../assets/icons/heart-pulse-simple.svg';
 import { CustomButton, CustomForm, Modal, Typography, Wrapper } from '../../common';
-import { useState } from 'react';
+import './styles.scss';
 
 export const Appointment = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);

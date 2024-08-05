@@ -1,9 +1,9 @@
-import './styles.scss';
-import LogoIcon from '../../assets/icons/logo.svg';
-import { menuItems, subMenuItems } from './constants';
 import { useState } from 'react';
+import LogoIcon from '../../assets/icons/logo.svg';
 import { CustomButton } from '../../common';
 import { CustomButtonType } from '../../common/CustomButton/types';
+import { menuItems, subMenuItems } from './constants';
+import './styles.scss';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

@@ -1,9 +1,9 @@
+import { useState } from 'react';
+import HeartPulseIcon from '../../assets/icons/heart-pulse-simple.svg';
 import { CustomButton, CustomForm, Modal, Typography, Wrapper } from '../../common';
+import { Routes } from '../../routes';
 import { budget } from './constants';
 import './styles.scss';
-import HeartPulseIcon from '../../assets/icons/heart-pulse-simple.svg';
-import { Routes } from '../../routes';
-import { useState } from 'react';
 
 export const Pricing = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
