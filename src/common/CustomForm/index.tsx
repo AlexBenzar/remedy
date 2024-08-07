@@ -18,7 +18,7 @@ export const CustomForm = ({
     phone: string;
     email: string;
     story: string;
-    date: Date;
+    date: string;
   }
 
   const initialValues: IFormValues = {
@@ -26,7 +26,7 @@ export const CustomForm = ({
     phone: '',
     email: '',
     story: '',
-    date: new Date(),
+    date: '',
   };
 
   const validationSchema = Yup.object({
@@ -34,7 +34,7 @@ export const CustomForm = ({
     phone: Yup.string().required('Required'),
     email: Yup.string().email('Invalid email').trim().matches(EMAIL_PATTERN).required('Required'),
     story: Yup.string(),
-    date: Yup.date(),
+    date: Yup.string(),
   });
 
   return (

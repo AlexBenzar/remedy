@@ -55,7 +55,7 @@ export const Hello = () => {
       )}
       <Modal
         isVisible={isSubmit}
-        onClick={() => setIsSubmit(false)}
+        onClose={() => setIsSubmit(false)}
         title="Appointment successfully booked. We will contact you soon."
       />
     </div>
