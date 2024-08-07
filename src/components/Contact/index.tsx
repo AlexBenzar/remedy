@@ -48,7 +48,7 @@ export const Contact = () => {
           <CustomForm onSubmit={() => setIsSubmit(true)} />
           <Modal
             isVisible={isSubmit}
-            onClick={() => setIsSubmit(false)}
+            onClose={() => setIsSubmit(false)}
             title="Messsage is successfully sent. We will reply you soon."
           />
         </div>

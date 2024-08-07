@@ -45,7 +45,7 @@ export const CustomForm = ({
         console.log(values);
         onSubmit();
       }}>
-      {({ values, touched, handleChange, errors, setFieldValue }) => (
+      {({ values, handleChange }) => (
         <Form className="form" {...props}>
           <div className="form__title">
             <Typography fontSize={18}>
