@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import HeartPulseIcon from '../../assets/icons/heart-pulse-simple.svg';
 import { CustomButton, CustomForm, Modal, Typography, Wrapper } from '../../common';
+import { FormType } from '../../common/CustomForm/types';
 import { Routes } from '../../routes';
 import { budget } from './constants';
 import './styles.scss';
@@ -66,7 +67,7 @@ export const Pricing = () => {
               setIsFormOpen(false);
               setIsSubmit(true);
             }}
-            formType="appointment"
+            formType={FormType.APPOINTMENT}
           />
         </Wrapper>
       )}

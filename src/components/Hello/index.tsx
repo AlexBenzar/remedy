@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { CustomButton, CustomForm, Modal, Typography, Wrapper } from '../../common';
 import { CustomButtonType } from '../../common/CustomButton/types';
+import { FormType } from '../../common/CustomForm/types';
 import { Routes } from '../../routes';
 import './styles.scss';
 
@@ -48,7 +49,7 @@ export const Hello = () => {
               setIsFormOpen(false);
               setIsSubmit(true);
             }}
-            formType="appointment"
+            formType={FormType.APPOINTMENT}
           />
         </Wrapper>
       )}
